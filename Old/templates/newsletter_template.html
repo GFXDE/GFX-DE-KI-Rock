@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISO 50001 Regulatory Update – {{ quarter }}</title>
+    <style>
+        body { font-family: Arial; background-color: #f7f9fa; padding: 20px; }
+        .container { max-width: 700px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; }
+        .change-block { margin-bottom: 20px; padding: 15px; background-color: #f1f5f9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Regulatory Updates – {{ quarter }}</h1>
+        <p>Dear {{ customer_name }},</p>
+        <p>Please find the relevant ISO 50001 updates:</p>
+        {% for change in changes %}
+        <div class="change-block">
+            <strong>{{ change.type | capitalize }} – Effective from {{ change.effective_date }}</strong><br>
+            <em>Category: {{ change.category }}</em><br>
+            <p>{{ change.content }}</p>
+        </div>
+        {% endfor %}
+        <p>This was sent to {{ customer_email }}. © {{ current_year }} Your Company.</p>
+    </div>
+</body>
+</html>

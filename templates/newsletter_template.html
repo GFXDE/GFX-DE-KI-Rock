@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Newsletter</title></head>
+<body>
+<h1>ISO 50001 Updates – {{ quarter }}</h1>
+<p>Dear {{ customer_name }},</p>
+{% for change in changes %}
+<div>
+    <strong>{{ change.type | capitalize }} (Effective: {{ change.effective_date }})</strong><br>
+    <em>Category: {{ change.category }}</em><br>
+    <p>{{ change.content }}</p>
+</div>
+{% endfor %}
+<p>This message was sent to {{ customer_email }}. &copy; {{ current_year }} Your Company.</p>
+</body>
+</html>

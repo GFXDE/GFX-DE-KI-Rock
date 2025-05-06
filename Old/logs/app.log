@@ -1,0 +1,10 @@
+PySide6
+Jinja2
+2025-05-05 17:26:34,828 User admin logged in.
+2025-05-05 17:31:31,275 User admin logged in.
+2025-05-05 17:31:53,256 Added customer: Kunde 1 <kunde1@email.com>
+2025-05-05 17:32:24,587 Failed to send email: [Errno 8] nodename nor servname provided, or not known
+2025-05-05 17:36:30,653 User admin logged in.
+2025-05-06 15:43:04,428 User admin logged in.
+2025-05-06 15:43:11,199 Failed to send email: [Errno 8] nodename nor servname provided, or not known
+2025-05-06 15:45:07,871 Added customer: Kunde2 <asdf@df.com>
